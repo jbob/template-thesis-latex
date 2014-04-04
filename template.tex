@@ -2,7 +2,8 @@
 parskip=true,  % „german” paragraphs
 fontsize=12pt, % or 11pt or 10pt
 BCOR=12mm,     % binding correction
-twoside=false  % no duplex printing -> no differnece between left and right pages
+twoside=false,  % no duplex printing -> no differnece between left and right pages
+numbers=noenddot % see scrguide.pdf
 ]{scrreprt}
 
 % boiler plate. Sources musst be UTF-8, „new” german is the document language
@@ -44,6 +45,10 @@ twoside=false  % no duplex printing -> no differnece between left and right page
     pdfsubject={Topic Topic}
     pdfkeywords={Masterarbeit, fistname, lastname, Topic}
 }
+
+% no widows or orphans
+\widowpenalty 10000
+\clubpenalty 10000
 
 \begin{document}
 % Here is everything in one document, obviously you want to split it up and use
@@ -209,6 +214,17 @@ Siehe Codebeispiel \ref{lst:hello}.
 \end{equation}
 
 Ganz toll sind auch die Formeln \ref{eq:kreis} und \ref{eq:einstein}.
+
+\blindtext
+
+\appendix
+
+\chapter{Erster Ahang}
+
+\blindtext
+
+\chapter{Zweiter Anhang}
+\section{Eine Section}
 
 \blindtext
 
